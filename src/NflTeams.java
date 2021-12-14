@@ -9,56 +9,47 @@ import javax.swing.JOptionPane;
 //import javax.swing.JTextField;
 
 public class NflTeams {
-	
-public static void mL(String name){
-		
+
+	public static void mL(String name) {
+
 		JFrame oddy = new JFrame("Odds");
-//		oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		oddy.setLayout(new GridLayout(5, 10, 20, 20));
-		oddy.setSize(350,350);
-		
-		
-		
+		oddy.setSize(350, 350);
+
 		JButton ML = new JButton("ML");
-		ML.addActionListener(e -> System.out.println(name+ " ML"));
-		ML.addActionListener(e->oddy.dispose());
-		
+		ML.addActionListener(e -> System.out.println(name + " ML"));
+		ML.addActionListener(e -> oddy.dispose());
+
 		JButton odd = new JButton("+");
-//		String oddline = JOptionPane.showInputDialog("Odd line");
-//
-//		text.setName("+" + oddline);
-		odd.addActionListener(e->System.out.println(name+" +"+JOptionPane.showInputDialog("Odd line")));
-		odd.addActionListener(e->oddy.dispose());
-		
+		// String oddline = JOptionPane.showInputDialog("Odd line");
+		//
+		// text.setName("+" + oddline);
+		odd.addActionListener(e -> System.out.println(name + " +" + JOptionPane.showInputDialog("Odd line")));
+		odd.addActionListener(e -> oddy.dispose());
+
 		oddy.add(ML);
 		oddy.add(odd);
-		
-	
+
 		oddy.setVisible(true);
 		oddy.setLocationRelativeTo(null);
-		
+
 	}
-	
-	
-	
-	public static void NflDisplay()
-	{
+
+	public static void NflDisplay() {
 		FileOutputStream p = null;
 		try {
-			p = new FileOutputStream("C:\\Users\\adirb\\UdemyCertificationCourse\\Buttons\\src\\picks.txt",true);
+			p = new FileOutputStream("src\\picks.txt", true);
 			System.setOut(new PrintStream(p));
-		}catch(FileNotFoundException e){
+		} catch (FileNotFoundException e) {
 			e.getMessage();
 			System.exit(0);
-			
+
 		}
-		
-		
+
 		JFrame nfl = new JFrame("NFL Teams");
-//		nfl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// nfl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		nfl.setLayout(new GridLayout(5, 10, 20, 20));
-		
-		
 
 		JButton fortyniners = new JButton("49ers");
 		fortyniners.addActionListener(e -> NflTeams.mL("49ers"));
@@ -74,7 +65,7 @@ public static void mL(String name){
 
 		JButton broncos = new JButton("Broncos");
 		broncos.addActionListener(e -> NflTeams.mL("Broncos"));
-		
+
 		JButton browns = new JButton("Browns");
 		browns.addActionListener(e -> NflTeams.mL("Browns"));
 
@@ -98,7 +89,7 @@ public static void mL(String name){
 
 		JButton dolphins = new JButton("Dolphins");
 		dolphins.addActionListener(e -> NflTeams.mL("Dolphins"));
-		
+
 		JButton eagles = new JButton("Eagles");
 		eagles.addActionListener(e -> NflTeams.mL("Eagles"));
 
@@ -113,7 +104,7 @@ public static void mL(String name){
 
 		JButton jaguars = new JButton("Jaguars");
 		jaguars.addActionListener(e -> NflTeams.mL("Jaguars"));
-		
+
 		JButton jets = new JButton("Jets");
 		jets.addActionListener(e -> NflTeams.mL("Jets"));
 
@@ -152,13 +143,10 @@ public static void mL(String name){
 
 		JButton titans = new JButton("Titans");
 		titans.addActionListener(e -> NflTeams.mL("Titans"));
-		
+
 		JButton vikings = new JButton("Vikings");
 		vikings.addActionListener(e -> NflTeams.mL("Vikings"));
 
-		
-		
-		
 		nfl.add(fortyniners);
 		nfl.add(bears);
 		nfl.add(bengals);
@@ -192,12 +180,11 @@ public static void mL(String name){
 		nfl.add(texans);
 		nfl.add(titans);
 		nfl.add(vikings);
-		
-		
+
 		nfl.pack();
 		nfl.setVisible(true);
 		nfl.setLocationRelativeTo(null);
-		
+
 	}
 
 }
