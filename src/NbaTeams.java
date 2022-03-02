@@ -10,50 +10,67 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 //import javax.swing.JTextField;
 
+
+
 public class NbaTeams {
-
-	public static void mL(String name) {
-
+	
+public static void mL(String name){
+		
 		JFrame oddy = new JFrame("Odds");
-		// oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		oddy.setLayout(new GridLayout(5, 10, 20, 20));
-		oddy.setSize(350, 350);
+		oddy.setSize(350,350);
+		
 
-		// JTextField text = new JTextField();
-
+		
+//		JTextField text = new JTextField();
+	
+	
+		
+		
+		
 		JButton ML = new JButton("ML");
-		ML.addActionListener(e -> System.out.println(name + " ML"));
-		ML.addActionListener(e -> oddy.dispose());
-
+		ML.addActionListener(e -> System.out.println(name+ " ML"));
+		ML.addActionListener(e->oddy.dispose());
+		
 		JButton odd = new JButton("+");
-		// String oddline = JOptionPane.showInputDialog("Odd line");
-		//
-		// text.setName("+" + oddline);
-		odd.addActionListener(e -> System.out.println(name + " +" + JOptionPane.showInputDialog("Odd line")));
-		odd.addActionListener(e -> oddy.dispose());
-
+//		String oddline = JOptionPane.showInputDialog("Odd line");
+//
+//		text.setName("+" + oddline);
+		odd.addActionListener(e->System.out.println(name+" +"+JOptionPane.showInputDialog("Odd line")));
+		odd.addActionListener(e->oddy.dispose());
+		
 		oddy.add(ML);
 		oddy.add(odd);
-
+		
+	
 		oddy.setVisible(true);
 		oddy.setLocationRelativeTo(null);
-
+		
 	}
-
-	public static void displayNBA() {
+	
+	
+	
+	
+	public static void displayNBA()
+	{
 		FileOutputStream p = null;
 		try {
-			p = new FileOutputStream("src\\picks.txt", true);
+			p = new FileOutputStream("C:\\Users\\adirb\\UdemyCertificationCourse\\Buttons\\src\\picks.txt",true);
 			System.setOut(new PrintStream(p));
-		} catch (FileNotFoundException e) {
+		}catch(FileNotFoundException e){
 			e.getMessage();
 			System.exit(0);
-
+			
 		}
-
+		
+		
+		
 		JFrame nba = new JFrame("NBA Teams");
-		// nba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		nba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		nba.setLayout(new GridLayout(5, 10, 20, 20));
+		
+		
 
 		JButton philly = new JButton("76ers");
 		philly.addActionListener(e -> NbaTeams.mL("76ers"));
@@ -90,7 +107,7 @@ public class NbaTeams {
 
 		JButton timberwolves = new JButton("Timberwolves");
 		timberwolves.addActionListener(e -> NbaTeams.mL("Timberwolves"));
-
+		
 		JButton spurs = new JButton("Spurs");
 		spurs.addActionListener(e -> NbaTeams.mL("Spurs"));
 
@@ -101,11 +118,11 @@ public class NbaTeams {
 		clippers.addActionListener(e -> NbaTeams.mL("Clippers"));
 
 		JButton suns = new JButton("Suns");
-		suns.addActionListener(e -> NbaTeams.mL("Suns"));
+		suns.addActionListener(e ->NbaTeams.mL("Suns"));
 
 		JButton trail = new JButton("Trail Blazers");
 		trail.addActionListener(e -> NbaTeams.mL("Trail Blazers"));
-
+		
 		JButton kings = new JButton("Kings");
 		kings.addActionListener(e -> NbaTeams.mL("Kings"));
 
@@ -144,6 +161,9 @@ public class NbaTeams {
 
 		JButton magic = new JButton("Magic");
 		magic.addActionListener(e -> NbaTeams.mL("Magic"));
+		
+		
+		
 
 		nba.add(philly);
 		nba.add(bucks);
@@ -175,11 +195,15 @@ public class NbaTeams {
 		nba.add(trail);
 		nba.add(warrior);
 		nba.add(wizards);
+		
+		
+	
 
 		nba.pack();
 		nba.setVisible(true);
 		nba.setLocationRelativeTo(null);
-
+		
+		
 	}
 
 }
