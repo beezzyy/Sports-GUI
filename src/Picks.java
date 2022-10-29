@@ -5,7 +5,6 @@ public class Picks {
 
 		Menu.menu();
 		
-
 	}
 
 }

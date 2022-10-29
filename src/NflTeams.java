@@ -9,156 +9,144 @@ import javax.swing.JOptionPane;
 //import javax.swing.JTextField;
 
 public class NflTeams {
-	
-public static void mL(String name){
-		
+
+	public static void mL(String name) {
+
 		JFrame oddy = new JFrame("Odds");
-//		oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		oddy.setLayout(new GridLayout(5, 10, 20, 20));
-		oddy.setSize(350,350);
-		
-		
-		
+		oddy.setSize(350, 350);
+
 		JButton ML = new JButton("ML");
-		ML.addActionListener(e -> System.out.println(name+ " ML"));
-		ML.addActionListener(e->oddy.dispose());
-		
+		ML.addActionListener(e -> System.out.println(name + " ML"));
+		ML.addActionListener(e -> oddy.dispose());
+
 		JButton odd = new JButton("+");
-//		String oddline = JOptionPane.showInputDialog("Odd line");
-//
-//		text.setName("+" + oddline);
-		odd.addActionListener(e->System.out.println(name+" +"+JOptionPane.showInputDialog("Odd line")));
-		odd.addActionListener(e->oddy.dispose());
-		
+		// String oddline = JOptionPane.showInputDialog("Odd line");
+		//
+		// text.setName("+" + oddline);
+		odd.addActionListener(e -> System.out.println(name + " +" + JOptionPane.showInputDialog("Odd line")));
+		odd.addActionListener(e -> oddy.dispose());
+
 		oddy.add(ML);
 		oddy.add(odd);
-		
-	
+
 		oddy.setVisible(true);
 		oddy.setLocationRelativeTo(null);
-		
+
 	}
-	
-	
-	
-	public static void NflDisplay()
-	{
+
+	public static void NflDisplay() {
 		FileOutputStream p = null;
 		try {
-			p = new FileOutputStream("C:\\Users\\adirb\\UdemyCertificationCourse\\Buttons\\src\\picks.txt",true);
+			p = new FileOutputStream("C:\\Users\\adirb\\SportsGUI\\Sports-GUI\\src\\Picks.txt", true);
 			System.setOut(new PrintStream(p));
-		}catch(FileNotFoundException e){
+		} catch (FileNotFoundException e) {
 			e.getMessage();
 			System.exit(0);
-			
+
 		}
-		
-		
+
 		JFrame nfl = new JFrame("NFL Teams");
-//		nfl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// nfl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		nfl.setLayout(new GridLayout(5, 10, 20, 20));
-		
-		
 
 		JButton fortyniners = new JButton("49ers");
-		fortyniners.addActionListener(e -> NflTeams.mL("49ers"));
+		fortyniners.addActionListener(e -> NflTeams.mL(":football:49ers"));
 
 		JButton bears = new JButton("Bears");
-		bears.addActionListener(e -> NflTeams.mL("Bears"));
+		bears.addActionListener(e -> NflTeams.mL(":football:Bears"));
 
 		JButton bengals = new JButton("Bengals");
-		bengals.addActionListener(e -> NflTeams.mL("Bengals"));
+		bengals.addActionListener(e -> NflTeams.mL(":football:Bengals"));
 
 		JButton bills = new JButton("Bills");
-		bills.addActionListener(e -> NflTeams.mL("Bills"));
+		bills.addActionListener(e -> NflTeams.mL(":football:Bills"));
 
 		JButton broncos = new JButton("Broncos");
-		broncos.addActionListener(e -> NflTeams.mL("Broncos"));
-		
+		broncos.addActionListener(e -> NflTeams.mL(":football:Broncos"));
+
 		JButton browns = new JButton("Browns");
-		browns.addActionListener(e -> NflTeams.mL("Browns"));
+		browns.addActionListener(e -> NflTeams.mL(":football:Browns"));
 
 		JButton buccaneers = new JButton("Buccaneers");
-		buccaneers.addActionListener(e -> NflTeams.mL("Buccaneers"));
+		buccaneers.addActionListener(e -> NflTeams.mL(":football:Buccaneers"));
 
 		JButton cardinals = new JButton("Cardinals");
-		cardinals.addActionListener(e -> NflTeams.mL("Cardinals"));
+		cardinals.addActionListener(e -> NflTeams.mL(":football:Cardinals"));
 
 		JButton chargers = new JButton("Chargers");
-		chargers.addActionListener(e -> NflTeams.mL("Chargers"));
+		chargers.addActionListener(e -> NflTeams.mL(":football:Chargers"));
 
 		JButton chiefs = new JButton("Chiefs");
-		chiefs.addActionListener(e -> NflTeams.mL("Chiefs"));
+		chiefs.addActionListener(e -> NflTeams.mL(":football:Chiefs"));
 
 		JButton colts = new JButton("Colts");
-		colts.addActionListener(e -> NflTeams.mL("Colts"));
+		colts.addActionListener(e -> NflTeams.mL(":football:Colts"));
 
 		JButton cowboys = new JButton("Cowboys");
-		cowboys.addActionListener(e -> NflTeams.mL("Cowboys"));
+		cowboys.addActionListener(e -> NflTeams.mL(":football:Cowboys"));
 
 		JButton dolphins = new JButton("Dolphins");
-		dolphins.addActionListener(e -> NflTeams.mL("Dolphins"));
-		
+		dolphins.addActionListener(e -> NflTeams.mL(":football:Dolphins"));
+
 		JButton eagles = new JButton("Eagles");
-		eagles.addActionListener(e -> NflTeams.mL("Eagles"));
+		eagles.addActionListener(e -> NflTeams.mL(":football:Eagles"));
 
 		JButton falcons = new JButton("Falcons");
-		falcons.addActionListener(e -> NflTeams.mL("Falcons"));
+		falcons.addActionListener(e -> NflTeams.mL(":football:Falcons"));
 
-		JButton footballTeam = new JButton("Football Team");
-		footballTeam.addActionListener(e -> NflTeams.mL("Football Team"));
+		JButton commanders = new JButton("Commanders");
+		commanders.addActionListener(e -> NflTeams.mL(":football:Commanders"));
 
 		JButton giants = new JButton("Giants");
-		giants.addActionListener(e -> NflTeams.mL("Giants"));
+		giants.addActionListener(e -> NflTeams.mL(":football:Giants"));
 
 		JButton jaguars = new JButton("Jaguars");
-		jaguars.addActionListener(e -> NflTeams.mL("Jaguars"));
-		
+		jaguars.addActionListener(e -> NflTeams.mL(":football:Jaguars"));
+
 		JButton jets = new JButton("Jets");
-		jets.addActionListener(e -> NflTeams.mL("Jets"));
+		jets.addActionListener(e -> NflTeams.mL(":football:Jets"));
 
 		JButton lions = new JButton("Lions");
-		lions.addActionListener(e -> NflTeams.mL("Lions"));
+		lions.addActionListener(e -> NflTeams.mL(":football:Lions"));
 
 		JButton packers = new JButton("Packers");
-		packers.addActionListener(e -> NflTeams.mL("Packers"));
+		packers.addActionListener(e -> NflTeams.mL(":football:Packers"));
 
 		JButton panthers = new JButton("Panthers");
-		panthers.addActionListener(e -> NflTeams.mL("Panthers"));
+		panthers.addActionListener(e -> NflTeams.mL(":football:Panthers"));
 
 		JButton patriots = new JButton("Patriots");
-		patriots.addActionListener(e -> NflTeams.mL("Patriots"));
+		patriots.addActionListener(e -> NflTeams.mL(":football:Patriots"));
 
 		JButton raiders = new JButton("Raiders");
-		raiders.addActionListener(e -> NflTeams.mL("Raiders"));
+		raiders.addActionListener(e -> NflTeams.mL(":football:Raiders"));
 
 		JButton rams = new JButton("Rams");
-		rams.addActionListener(e -> NflTeams.mL("Rams"));
+		rams.addActionListener(e -> NflTeams.mL(":football:Rams"));
 
 		JButton ravens = new JButton("Ravens");
-		ravens.addActionListener(e -> NflTeams.mL("Ravens"));
+		ravens.addActionListener(e -> NflTeams.mL(":football:Ravens"));
 
 		JButton saints = new JButton("Saints");
-		saints.addActionListener(e -> NflTeams.mL("Saints"));
+		saints.addActionListener(e -> NflTeams.mL(":football:Saints"));
 
 		JButton seahawks = new JButton("Seahawks");
-		seahawks.addActionListener(e -> NflTeams.mL("Seahawks"));
+		seahawks.addActionListener(e -> NflTeams.mL(":football:Seahawks"));
 
 		JButton steelers = new JButton("Steelers");
-		steelers.addActionListener(e -> NflTeams.mL("Steelers"));
+		steelers.addActionListener(e -> NflTeams.mL(":football:Steelers"));
 
 		JButton texans = new JButton("Texans");
-		texans.addActionListener(e -> NflTeams.mL("Texans"));
+		texans.addActionListener(e -> NflTeams.mL(":football:Texans"));
 
 		JButton titans = new JButton("Titans");
-		titans.addActionListener(e -> NflTeams.mL("Titans"));
-		
-		JButton vikings = new JButton("Vikings");
-		vikings.addActionListener(e -> NflTeams.mL("Vikings"));
+		titans.addActionListener(e -> NflTeams.mL(":football:Titans"));
 
-		
-		
-		
+		JButton vikings = new JButton("Vikings");
+		vikings.addActionListener(e -> NflTeams.mL(":football:Vikings"));
+
 		nfl.add(fortyniners);
 		nfl.add(bears);
 		nfl.add(bengals);
@@ -170,11 +158,11 @@ public static void mL(String name){
 		nfl.add(chargers);
 		nfl.add(chiefs);
 		nfl.add(colts);
+		nfl.add(commanders);
 		nfl.add(cowboys);
 		nfl.add(dolphins);
 		nfl.add(eagles);
 		nfl.add(falcons);
-		nfl.add(footballTeam);
 		nfl.add(giants);
 		nfl.add(jaguars);
 		nfl.add(jets);
@@ -192,12 +180,11 @@ public static void mL(String name){
 		nfl.add(texans);
 		nfl.add(titans);
 		nfl.add(vikings);
-		
-		
+
 		nfl.pack();
 		nfl.setVisible(true);
 		nfl.setLocationRelativeTo(null);
-		
+
 	}
 
 }

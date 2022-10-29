@@ -10,160 +10,140 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 //import javax.swing.JTextField;
 
-
-
 public class NbaTeams {
-	
-public static void mL(String name){
-		
-		JFrame oddy = new JFrame("Odds");
-//		oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		oddy.setLayout(new GridLayout(5, 10, 20, 20));
-		oddy.setSize(350,350);
-		
 
-		
-//		JTextField text = new JTextField();
-	
-	
-		
-		
-		
+	public static void mL(String name) {
+
+		JFrame oddy = new JFrame("Odds");
+		// oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		oddy.setLayout(new GridLayout(5, 10, 20, 20));
+		oddy.setSize(350, 350);
+
+		// JTextField text = new JTextField();
+
 		JButton ML = new JButton("ML");
-		ML.addActionListener(e -> System.out.println(name+ " ML"));
-		ML.addActionListener(e->oddy.dispose());
-		
+		ML.addActionListener(e -> System.out.println(name + " ML"));
+		ML.addActionListener(e -> oddy.dispose());
+
 		JButton odd = new JButton("+");
-//		String oddline = JOptionPane.showInputDialog("Odd line");
-//
-//		text.setName("+" + oddline);
-		odd.addActionListener(e->System.out.println(name+" +"+JOptionPane.showInputDialog("Odd line")));
-		odd.addActionListener(e->oddy.dispose());
-		
+		// String oddline = JOptionPane.showInputDialog("Odd line");
+		//
+		// text.setName("+" + oddline);
+		odd.addActionListener(e -> System.out.println(name + " +" + JOptionPane.showInputDialog("Odd line")));
+		odd.addActionListener(e -> oddy.dispose());
+
 		oddy.add(ML);
 		oddy.add(odd);
-		
-	
+
 		oddy.setVisible(true);
 		oddy.setLocationRelativeTo(null);
-		
+
 	}
-	
-	
-	
-	
-	public static void displayNBA()
-	{
+
+	public static void displayNBA() {
 		FileOutputStream p = null;
 		try {
-			p = new FileOutputStream("C:\\Users\\adirb\\UdemyCertificationCourse\\Buttons\\src\\picks.txt",true);
+			p = new FileOutputStream("C:\\Users\\adirb\\SportsGUI\\Sports-GUI\\src\\Picks.txt", true);
 			System.setOut(new PrintStream(p));
-		}catch(FileNotFoundException e){
+		} catch (FileNotFoundException e) {
 			e.getMessage();
 			System.exit(0);
-			
+
 		}
-		
-		
-		
+
 		JFrame nba = new JFrame("NBA Teams");
-//		nba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// nba.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		nba.setLayout(new GridLayout(5, 10, 20, 20));
-		
-		
 
 		JButton philly = new JButton("76ers");
-		philly.addActionListener(e -> NbaTeams.mL("76ers"));
+		philly.addActionListener(e -> NbaTeams.mL(":basketball:76ers"));
 
 		JButton hawks = new JButton("Hawks");
-		hawks.addActionListener(e -> NbaTeams.mL("Hawks"));
+		hawks.addActionListener(e -> NbaTeams.mL(":basketball:Hawks"));
 
 		JButton wizards = new JButton("Wizards");
-		wizards.addActionListener(e -> NbaTeams.mL("Wizards"));
+		wizards.addActionListener(e -> NbaTeams.mL(":basketball:Wizards"));
 
 		JButton cavaliers = new JButton("Cavaliers");
-		cavaliers.addActionListener(e -> NbaTeams.mL("Cavaliers"));
+		cavaliers.addActionListener(e -> NbaTeams.mL(":basketball:Cavaliers"));
 
 		JButton pistons = new JButton("Pistons");
-		pistons.addActionListener(e -> NbaTeams.mL("Pistons"));
+		pistons.addActionListener(e -> NbaTeams.mL(":basketball:Pistons"));
 
 		JButton pacers = new JButton("Pacers");
-		pacers.addActionListener(e -> NbaTeams.mL("Pacers"));
+		pacers.addActionListener(e -> NbaTeams.mL(":basketball:Pacers"));
 
 		JButton raptors = new JButton("Raptors");
-		raptors.addActionListener(e -> NbaTeams.mL("Raptors"));
+		raptors.addActionListener(e -> NbaTeams.mL(":basketball:Raptors"));
 
 		JButton bucks = new JButton("Bucks");
-		bucks.addActionListener(e -> NbaTeams.mL("Bucks"));
+		bucks.addActionListener(e -> NbaTeams.mL(":basketball:Bucks"));
 
 		JButton mavericks = new JButton("Mavericks");
-		mavericks.addActionListener(e -> NbaTeams.mL("Mavericks"));
+		mavericks.addActionListener(e -> NbaTeams.mL(":basketball:Mavericks"));
 
 		JButton nuggets = new JButton("Nuggets");
-		nuggets.addActionListener(e -> NbaTeams.mL("Nuggets"));
+		nuggets.addActionListener(e -> NbaTeams.mL(":basketball:Nuggets"));
 
 		JButton grizzlies = new JButton("Grizzlies");
-		grizzlies.addActionListener(e -> NbaTeams.mL("Grizzlies"));
+		grizzlies.addActionListener(e -> NbaTeams.mL(":basketball:Grizzlies"));
 
 		JButton timberwolves = new JButton("Timberwolves");
-		timberwolves.addActionListener(e -> NbaTeams.mL("Timberwolves"));
-		
+		timberwolves.addActionListener(e -> NbaTeams.mL(":basketball:Timberwolves"));
+
 		JButton spurs = new JButton("Spurs");
-		spurs.addActionListener(e -> NbaTeams.mL("Spurs"));
+		spurs.addActionListener(e -> NbaTeams.mL(":basketball:Spurs"));
 
 		JButton jazz = new JButton("Jazz");
-		jazz.addActionListener(e -> NbaTeams.mL("Jazz"));
+		jazz.addActionListener(e -> NbaTeams.mL(":basketball:Jazz"));
 
 		JButton clippers = new JButton("Clippers");
-		clippers.addActionListener(e -> NbaTeams.mL("Clippers"));
+		clippers.addActionListener(e -> NbaTeams.mL(":basketball:Clippers"));
 
 		JButton suns = new JButton("Suns");
-		suns.addActionListener(e ->NbaTeams.mL("Suns"));
+		suns.addActionListener(e -> NbaTeams.mL(":basketball:Suns"));
 
 		JButton trail = new JButton("Trail Blazers");
-		trail.addActionListener(e -> NbaTeams.mL("Trail Blazers"));
-		
+		trail.addActionListener(e -> NbaTeams.mL(":basketball:Trail Blazers"));
+
 		JButton kings = new JButton("Kings");
-		kings.addActionListener(e -> NbaTeams.mL("Kings"));
+		kings.addActionListener(e -> NbaTeams.mL(":basketball:Kings"));
 
 		JButton knicks = new JButton("Knicks");
-		knicks.addActionListener(e -> NbaTeams.mL("Knicks"));
+		knicks.addActionListener(e -> NbaTeams.mL(":basketball:Knicks"));
 
 		JButton pelicans = new JButton("Pelicans");
-		pelicans.addActionListener(e -> NbaTeams.mL("Pelicans"));
+		pelicans.addActionListener(e -> NbaTeams.mL(":basketball:Pelicans"));
 
 		JButton hornets = new JButton("Hornets");
-		hornets.addActionListener(e -> NbaTeams.mL("Hornets"));
+		hornets.addActionListener(e -> NbaTeams.mL(":basketball:Hornets"));
 
 		JButton rockets = new JButton("Rockets");
-		rockets.addActionListener(e -> NbaTeams.mL("Rockets"));
+		rockets.addActionListener(e -> NbaTeams.mL(":basketball:Rockets"));
 
 		JButton heat = new JButton("Heat");
-		heat.addActionListener(e -> NbaTeams.mL("Heat"));
+		heat.addActionListener(e -> NbaTeams.mL(":basketball:Heat"));
 
 		JButton bulls = new JButton("Bulls");
-		bulls.addActionListener(e -> NbaTeams.mL("Bulls"));
+		bulls.addActionListener(e -> NbaTeams.mL(":basketball:Bulls"));
 
 		JButton nets = new JButton("Nets");
-		nets.addActionListener(e -> NbaTeams.mL("Nets"));
+		nets.addActionListener(e -> NbaTeams.mL(":basketball:Nets"));
 
 		JButton thunder = new JButton("Thunder");
-		thunder.addActionListener(e -> NbaTeams.mL("Thunder"));
+		thunder.addActionListener(e -> NbaTeams.mL(":basketball:Thunder"));
 
 		JButton warrior = new JButton("Warriors");
-		warrior.addActionListener(e -> NbaTeams.mL("Warriors"));
+		warrior.addActionListener(e -> NbaTeams.mL(":basketball:Warriors"));
 
 		JButton celtics = new JButton("Celtics");
-		celtics.addActionListener(e -> NbaTeams.mL("Celtics"));
+		celtics.addActionListener(e -> NbaTeams.mL(":basketball:Celtics"));
 
 		JButton lakers = new JButton("Lakers");
-		lakers.addActionListener(e -> NbaTeams.mL("Lakers"));
+		lakers.addActionListener(e -> NbaTeams.mL(":basketball:Lakers"));
 
 		JButton magic = new JButton("Magic");
-		magic.addActionListener(e -> NbaTeams.mL("Magic"));
-		
-		
-		
+		magic.addActionListener(e -> NbaTeams.mL(":basketball:Magic"));
 
 		nba.add(philly);
 		nba.add(bucks);
@@ -195,15 +175,11 @@ public static void mL(String name){
 		nba.add(trail);
 		nba.add(warrior);
 		nba.add(wizards);
-		
-		
-	
 
 		nba.pack();
 		nba.setVisible(true);
 		nba.setLocationRelativeTo(null);
-		
-		
+
 	}
 
 }

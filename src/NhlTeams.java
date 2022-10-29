@@ -7,150 +7,141 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class NhlTeams {
-	
-	public static void mL(String name){
-		
+
+	public static void mL(String name) {
+
 		JFrame oddy = new JFrame("Odds");
-//		oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// oddy.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		oddy.setLayout(new GridLayout(5, 10, 20, 20));
-		oddy.setSize(350,350);
-		
-		
+		oddy.setSize(350, 350);
+
 		JButton ML = new JButton("ML");
-		ML.addActionListener(e -> System.out.println(name+ " ML"));
-		ML.addActionListener(e->oddy.dispose());
-		
+		ML.addActionListener(e -> System.out.println(name + " ML"));
+		ML.addActionListener(e -> oddy.dispose());
+
 		JButton odd = new JButton("+1.5");
-		odd.addActionListener(e->System.out.println(name+ " +1.5"));
-		odd.addActionListener(e->oddy.dispose());
-		
+		odd.addActionListener(e -> System.out.println(name + " +1.5"));
+		odd.addActionListener(e -> oddy.dispose());
+
 		oddy.add(ML);
 		oddy.add(odd);
-	
+
 		oddy.setVisible(true);
 		oddy.setLocationRelativeTo(null);
-		
+
 	}
-	
-	
-	
-	
-	public static void displayNHL()
-	{
+
+	public static void displayNHL() {
 		FileOutputStream p = null;
 		try {
-			p = new FileOutputStream("C:\\Users\\adirb\\UdemyCertificationCourse\\Buttons\\src\\picks.txt",true);
+			p = new FileOutputStream("C:\\Users\\adirb\\SportsGUI\\Sports-GUI\\src\\Picks.txt", true);
 			System.setOut(new PrintStream(p));
-		}catch(FileNotFoundException e){
+		} catch (FileNotFoundException e) {
 			e.getMessage();
 			System.exit(0);
-			
+
 		}
-		
-		
+
 		JFrame nhl = new JFrame("NHL Teams");
-//		nhl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		// nhl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		nhl.setLayout(new GridLayout(5, 10, 20, 20));
-		
-		
 
 		JButton avalanche = new JButton("Avalanche");
-		avalanche.addActionListener(e -> NhlTeams.mL("Avalanche"));
+		avalanche.addActionListener(e -> NhlTeams.mL(":hockey:Avalanche"));
 
 		JButton blackhawks = new JButton("Blackhawks");
-		blackhawks.addActionListener(e -> NhlTeams.mL("Blackhawks"));
+		blackhawks.addActionListener(e -> NhlTeams.mL(":hockey:Blackhawks"));
 
 		JButton bluejackets = new JButton("Blue Jackets");
-		bluejackets.addActionListener(e -> NhlTeams.mL("Blue Jackets"));
+		bluejackets.addActionListener(e -> NhlTeams.mL(":hockey:Blue Jackets"));
 
 		JButton blues = new JButton("Blues");
-		blues.addActionListener(e -> NhlTeams.mL("Blues"));
+		blues.addActionListener(e -> NhlTeams.mL(":hockey:Blues"));
 
 		JButton bruins = new JButton("Bruins");
-		bruins.addActionListener(e -> NhlTeams.mL("Bruins"));
+		bruins.addActionListener(e -> NhlTeams.mL(":hockey:Bruins"));
 
 		JButton canadiens = new JButton("Canadiens");
-		canadiens.addActionListener(e -> NhlTeams.mL("Canadiens"));
+		canadiens.addActionListener(e -> NhlTeams.mL(":hockey:Canadiens"));
 
 		JButton canucks = new JButton("Canucks");
-		canucks.addActionListener(e -> NhlTeams.mL("Canucks"));
+		canucks.addActionListener(e -> NhlTeams.mL(":hockey:Canucks"));
 
 		JButton capitals = new JButton("Capitals");
-		capitals.addActionListener(e -> NhlTeams.mL("Capitals"));
+		capitals.addActionListener(e -> NhlTeams.mL(":hockey:Capitals"));
 
 		JButton coyotes = new JButton("Coyotes");
-		coyotes.addActionListener(e -> NhlTeams.mL("Coyotes"));
+		coyotes.addActionListener(e -> NhlTeams.mL(":hockey:Coyotes"));
 
 		JButton devils = new JButton("Devils");
-		devils.addActionListener(e -> NhlTeams.mL("Devils"));
+		devils.addActionListener(e -> NhlTeams.mL(":hockey:Devils"));
 
 		JButton ducks = new JButton("Ducks");
-		ducks.addActionListener(e -> NhlTeams.mL("Ducks"));
+		ducks.addActionListener(e -> NhlTeams.mL(":hockey:Ducks"));
 
 		JButton flames = new JButton("Flames");
-		flames.addActionListener(e -> NhlTeams.mL("Flames"));
-		
-		JButton flyers = new JButton("Flyers");
-		flyers.addActionListener(e -> NhlTeams.mL("Flyers"));
+		flames.addActionListener(e -> NhlTeams.mL(":hockey:Flames"));
 
-		JButton goldenknights = new JButton("GoldenKnights");
-		goldenknights.addActionListener(e -> NhlTeams.mL("GoldenKnights"));
+		JButton flyers = new JButton("Flyers");
+		flyers.addActionListener(e -> NhlTeams.mL(":hockey:Flyers"));
+
+		JButton goldenknights = new JButton("Golden Knights");
+		goldenknights.addActionListener(e -> NhlTeams.mL(":hockey:Golden Knights"));
 
 		JButton hurricanes = new JButton("Hurricanes");
-		hurricanes.addActionListener(e -> NhlTeams.mL("Hurricanes"));
+		hurricanes.addActionListener(e -> NhlTeams.mL(":hockey:Hurricanes"));
 
 		JButton islanders = new JButton("Islanders");
-		islanders.addActionListener(e -> NhlTeams.mL("Islanders"));
+		islanders.addActionListener(e -> NhlTeams.mL(":hockey:Islanders"));
 
 		JButton jets = new JButton("Jets");
-		jets.addActionListener(e -> NhlTeams.mL("Jets"));
-		
+		jets.addActionListener(e -> NhlTeams.mL(":hockey:Jets"));
+
 		JButton kings = new JButton("Kings");
-		kings.addActionListener(e -> NhlTeams.mL("Kings"));
+		kings.addActionListener(e -> NhlTeams.mL(":hockey:Kings"));
 
 		JButton krakens = new JButton("Kraken");
-		krakens.addActionListener(e -> NhlTeams.mL("Kraken"));
+		krakens.addActionListener(e -> NhlTeams.mL(":hockey:Kraken"));
 
 		JButton lightning = new JButton("Lightning");
-		lightning.addActionListener(e -> NhlTeams.mL("Lightning"));
+		lightning.addActionListener(e -> NhlTeams.mL(":hockey:Lightning"));
 
 		JButton mapleleafs = new JButton("Maple Leafs");
-		mapleleafs.addActionListener(e -> NhlTeams.mL("Maple Leafs"));
+		mapleleafs.addActionListener(e -> NhlTeams.mL(":hockey:Maple Leafs"));
 
 		JButton oilers = new JButton("Oilers");
-		oilers.addActionListener(e -> NhlTeams.mL("Oilers"));
+		oilers.addActionListener(e -> NhlTeams.mL(":hockey:Oilers"));
 
 		JButton panthers = new JButton("Panthers");
-		panthers.addActionListener(e ->NhlTeams.mL("Panthers"));
+		panthers.addActionListener(e -> NhlTeams.mL(":hockey:Panthers"));
 
 		JButton penguins = new JButton("Penguins");
-		penguins.addActionListener(e -> NhlTeams.mL("Penguins"));
+		penguins.addActionListener(e -> NhlTeams.mL(":hockey:Penguins"));
 
 		JButton predators = new JButton("Predators");
-		predators.addActionListener(e -> NhlTeams.mL("Predators"));
+		predators.addActionListener(e -> NhlTeams.mL(":hockey:Predators"));
 
 		JButton rangers = new JButton("Rangers");
-		rangers.addActionListener(e -> NhlTeams.mL("Rangers"));
+		rangers.addActionListener(e -> NhlTeams.mL(":hockey:Rangers"));
 
 		JButton redwings = new JButton("Red Wings");
-		redwings.addActionListener(e -> NhlTeams.mL("Red Wings"));
+		redwings.addActionListener(e -> NhlTeams.mL(":hockey:Red Wings"));
 
 		JButton sabres = new JButton("Sabres");
-		sabres.addActionListener(e -> NhlTeams.mL("Sabres"));
+		sabres.addActionListener(e -> NhlTeams.mL(":hockey:Sabres"));
 
 		JButton senators = new JButton("Senators");
-		senators.addActionListener(e -> NhlTeams.mL("Senators"));
+		senators.addActionListener(e -> NhlTeams.mL(":hockey:Senators"));
 
 		JButton sharks = new JButton("Sharks");
-		sharks.addActionListener(e -> NhlTeams.mL("Sharks"));
-		
+		sharks.addActionListener(e -> NhlTeams.mL(":hockey:Sharks"));
+
 		JButton stars = new JButton("Stars");
-		stars.addActionListener(e -> NhlTeams.mL("Stars"));
+		stars.addActionListener(e -> NhlTeams.mL(":hockey:Stars"));
 
 		JButton wild = new JButton("Wild");
-		wild.addActionListener(e -> NhlTeams.mL("Wild"));
-		
-		
+		wild.addActionListener(e -> NhlTeams.mL(":hockey:Wild"));
+
 		nhl.add(avalanche);
 		nhl.add(blackhawks);
 		nhl.add(bluejackets);
@@ -183,12 +174,11 @@ public class NhlTeams {
 		nhl.add(sharks);
 		nhl.add(stars);
 		nhl.add(wild);
-		
-		
+
 		nhl.pack();
 		nhl.setVisible(true);
 		nhl.setLocationRelativeTo(null);
-		
+
 	}
 
 }
